@@ -25,7 +25,7 @@ export const companyLogos: companyLogo[] = [
 
 export const stackArea = {
   imageUrl:
-    "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bbe2f157-e46c-4b1a-9cb8-d73499b69a58/di88gvk-8012184c-ff16-4fd7-a928-96ff125d449e.jpg/v1/fit/w_828,h_1474,q_70,strp/perfil_portafolio_by_pachi3p_di88gvk-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTYwMCIsInBhdGgiOiJcL2ZcL2JiZTJmMTU3LWU0NmMtNGIxYS05Y2I4LWQ3MzQ5OWI2OWE1OFwvZGk4OGd2ay04MDEyMTg0Yy1mZjE2LTRmZDctYTkyOC05NmZmMTI1ZDQ0OWUuanBnIiwid2lkdGgiOiI8PTg5OSJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.GecWh4k3g6BpQnZ1_rjecF7a3g2g_MSDxgg1_56J3WQ",
+    "",
   presentationText: `I'm Alexander Villalvir`,
   experienceText: `I've been a full stack developer for more than 7 years.`,
   stackText: "My preferred stack:👇",
