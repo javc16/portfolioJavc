@@ -14,7 +14,7 @@ const { projects } = Astro.props;
     projects.map((proj: project, index: number) => (
       <Card>
         <div slot={index % 2 ? "before" : "after"}>
-          <img class="h-96 rounded-md" src={proj.imageUrl} alt="Image" />
+          <img class="h-96 rounded-md" src={proj.imageUrl} alt={proj.name} />
         </div>
         <div class="w-3/4">
           <h1 class="text-4xl text-center mb-4">{proj.name}</h1>
