@@ -3,11 +3,11 @@ import type { companyLogo, experience, project } from "../interfaces/interfaces"
 export const companyLogos: companyLogo[] = [
   {
     name: "Caracol Knits",
-    url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkd__f4Kf891dRLvRSMtTyqXHCFJ1fV8WwDQ&s",
+    url: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bbe2f157-e46c-4b1a-9cb8-d73499b69a58/di88t9w-9cc6684e-b253-4e87-a094-b4686a56018f.jpg/v1/fit/w_401,h_126,q_70,strp/caracolknitslogo_by_pachi3p_di88t9w-375w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI2IiwicGF0aCI6IlwvZlwvYmJlMmYxNTctZTQ2Yy00YjFhLTljYjgtZDczNDk5YjY5YTU4XC9kaTg4dDl3LTljYzY2ODRlLWIyNTMtNGU4Ny1hMDk0LWI0Njg2YTU2MDE4Zi5qcGciLCJ3aWR0aCI6Ijw9NDAxIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.RSk0-1lPSRoeAuaj4GerYEFSKRTPVXRLihMMOOI8XeM",
   },
   {
     name: "Azucarera La Grecia",
-    url: "https://fundahrse.org/wp-content/uploads/2020/05/la-grecia.png",
+    url: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bbe2f157-e46c-4b1a-9cb8-d73499b69a58/di88t5f-00da9d26-573b-4e67-92bd-8a3fc4a64670.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2JiZTJmMTU3LWU0NmMtNGIxYS05Y2I4LWQ3MzQ5OWI2OWE1OFwvZGk4OHQ1Zi0wMGRhOWQyNi01NzNiLTRlNjctOTJiZC04YTNmYzRhNjQ2NzAucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.8Lsq85Tg2MYVO4YAI2gksCx5ggAp77Zrh5rLwfkeNnI",
   },
   {
     name: "Stepstone",
@@ -19,13 +19,13 @@ export const companyLogos: companyLogo[] = [
   },
   {
     name: "Vensure",
-    url: "https://media.zenfs.com/en/business-wire.com/aa22e1a298c3765c98c11f088d4435bd",
+    url: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bbe2f157-e46c-4b1a-9cb8-d73499b69a58/di88su2-6af26efe-9449-423b-b592-ce262f3802ef.jpg/v1/fill/w_907,h_285,q_75,strp/vensurelogo_by_pachi3p_di88su2-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9Mjg1IiwicGF0aCI6IlwvZlwvYmJlMmYxNTctZTQ2Yy00YjFhLTljYjgtZDczNDk5YjY5YTU4XC9kaTg4c3UyLTZhZjI2ZWZlLTk0NDktNDIzYi1iNTkyLWNlMjYyZjM4MDJlZi5qcGciLCJ3aWR0aCI6Ijw9OTA3In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.CUEiFsFCU_F1iF7B22eqxeOAyzvo7w5uhiuCNzv2qm4",
   },
 ];
 
 export const stackArea = {
   imageUrl:
-    "",
+    "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bbe2f157-e46c-4b1a-9cb8-d73499b69a58/di88gvk-8012184c-ff16-4fd7-a928-96ff125d449e.jpg/v1/fit/w_828,h_1474,q_70,strp/perfil_portafolio_by_pachi3p_di88gvk-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTYwMCIsInBhdGgiOiJcL2ZcL2JiZTJmMTU3LWU0NmMtNGIxYS05Y2I4LWQ3MzQ5OWI2OWE1OFwvZGk4OGd2ay04MDEyMTg0Yy1mZjE2LTRmZDctYTkyOC05NmZmMTI1ZDQ0OWUuanBnIiwid2lkdGgiOiI8PTg5OSJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.GecWh4k3g6BpQnZ1_rjecF7a3g2g_MSDxgg1_56J3WQ",
   presentationText: `I'm Alexander Villalvir`,
   experienceText: `I've been a full stack developer for more than 7 years.`,
   stackText: "My preferred stack:👇",
@@ -36,7 +36,7 @@ export const technologyList: string[] = ["C#", "Angular", "NextJs", "SQL"];
 export const projects: project[] = [
   {
     name: "Gifs App",
-    imageUrl: "https://www.celoxis.com/cassets/img/pmc/project-management.png",
+    imageUrl: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bbe2f157-e46c-4b1a-9cb8-d73499b69a58/dh8x83z-9381081e-7101-485c-97ac-651f69c4ab09.png/v1/fill/w_863,h_646,q_80,strp/todo_by_pachi3p_dh8x83z-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjQ2IiwicGF0aCI6IlwvZlwvYmJlMmYxNTctZTQ2Yy00YjFhLTljYjgtZDczNDk5YjY5YTU4XC9kaDh4ODN6LTkzODEwODFlLTcxMDEtNDg1Yy05N2FjLTY1MWY2OWM0YWIwOS5wbmciLCJ3aWR0aCI6Ijw9ODYzIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.sT9XsDxi7U7XTyHCCB5T47sxArDHkIodr608YZvadZw",
     description: `Frontend solution to find gifs using a search field using angular and typescript best practices, you can click on view demo to test it yourself.`,
     demoUrl: "https://shimmering-kangaroo-edc1a1.netlify.app/",
     githubUrl: "https://github.com/javc16/03-gifs-app",
@@ -44,7 +44,7 @@ export const projects: project[] = [
   },
   {
     name: "Finance Backend",
-    imageUrl: "https://www.celoxis.com/cassets/img/pmc/project-management.png",
+    imageUrl: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bbe2f157-e46c-4b1a-9cb8-d73499b69a58/dh8x83z-9381081e-7101-485c-97ac-651f69c4ab09.png/v1/fill/w_863,h_646,q_80,strp/todo_by_pachi3p_dh8x83z-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjQ2IiwicGF0aCI6IlwvZlwvYmJlMmYxNTctZTQ2Yy00YjFhLTljYjgtZDczNDk5YjY5YTU4XC9kaDh4ODN6LTkzODEwODFlLTcxMDEtNDg1Yy05N2FjLTY1MWY2OWM0YWIwOS5wbmciLCJ3aWR0aCI6Ijw9ODYzIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.sT9XsDxi7U7XTyHCCB5T47sxArDHkIodr608YZvadZw",
     description: `Finance backend with all CRUD functionalities for clients, accounts and transactions entities with 2 reports as a plus, with all best practices like SOLID, dependency injection, repository and builder patterns and more.`,
     demoUrl: "",
     githubUrl: "https://github.com/javc16/Financiera",
