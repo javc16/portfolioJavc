@@ -1,11 +1,32 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/projectCard.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/projectCard.astro";
+import CompanyLogos from "../components/CompanyLogos.astro";
+import Experiences from "../components/Experiences.astro";
+import HeaderInformation from "../components/HeaderInformation.astro";
+import MainStack from "../components/MainStack.astro";
+import Navbar from "../components/Navbar.astro";
+import Projects from "../components/Projects.astro";
+import VerticalLine from "../components/VerticalLine.astro";
+import {
+  companyLogos,
+  stackArea,
+  technologyList,
+  projects,
+  experienceList,
+} from "../data/CvData";
 ---
 
 <Layout title="Jose Alexander Villalvir Portfolio">
-	<main>
-	
-	</main>
+  <main class="flex flex-col bg-gray-50">
+    <Navbar />
+     <HeaderInformation />
+    <CompanyLogos logos={companyLogos} />
+    <MainStack profile={stackArea} technologies={technologyList} />
+    <VerticalLine />
+    <Projects projects={projects} />
+    <VerticalLine />
+    <Experiences experiences={experienceList} />
+    <VerticalLine />
+  </main>
 </Layout>
-

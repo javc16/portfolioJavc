@@ -9,7 +9,7 @@ const { experiences } = Astro.props;
 
 
 <div id="experience" class="flex flex-col">
-    <h1 class="h-20 text-5xl text-center bg-gradient-to-r from-cyan-500 to-gray-800 text-transparent bg-clip-text mb-4">My Experience⚒️</h1>
+    <h1 class="text-5xl text-center bg-gradient-to-r from-cyan-500 to-gray-800 text-transparent bg-clip-text mb-4">My Experience⚒️</h1>
         {experiences.map((exp: experience) => (
           <Experience experience={exp}/>         
         ))}
