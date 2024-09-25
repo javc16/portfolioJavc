@@ -1,19 +1,30 @@
 ---
 import type { companyLogo } from "../interfaces/interfaces";
 const { logos } = Astro.props;
-
 ---
 
-
-<div class="flex flex-col mb-10">
-  <ul class="flex flex-wrap justify-around">
-    {logos.map((logo: companyLogo) => (
-      <li class="p-[10%] w-[45%] md:w-[30%] md:p-[10%] lg:w-[19%] lg:p-[5%]">
-        <img class="h-8" src={logo.url} alt={logo.name} />
-      </li>
-    ))}
+<div class="w-full inline-flex flex-nowrap mb-10">
+  <ul
+    class="flex items-center justify-center md:justify-start animate-infinite-scroll"
+  >
+    {
+      logos.map((logo: companyLogo) => (
+        <li class="mx-8">
+          <img class="h-8 max-w-none" src={logo.url} alt={logo.name} />
+        </li>
+      ))
+    }
+  </ul>
+  <ul
+    class="flex items-center justify-center md:justify-start animate-infinite-scroll"
+    aria-hidden="true"
+  >
+    {
+      logos.map((logo: companyLogo) => (
+        <li class="mx-8">
+          <img class="h-8 max-w-none" src={logo.url} alt={logo.name} />
+        </li>
+      ))
+    }
   </ul>
 </div>
-
-
-
