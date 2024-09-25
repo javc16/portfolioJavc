@@ -6,7 +6,7 @@ const { projects } = Astro.props;
 
 <div id="projects" class="flex flex-col">
   <h1
-    class="text-5xl text-center bg-gradient-to-r from-cyan-500 to-gray-800 text-transparent bg-clip-text mb-4"
+    class="text-5xl text-center bg-gradient-to-r from-cyan-500 to-gray-800 text-transparent bg-clip-text mb-10"
   >
     My Coding Projects
   </h1>
@@ -17,7 +17,7 @@ const { projects } = Astro.props;
           <img class="h-96 rounded-md" src={proj.imageUrl} alt={proj.name} />
         </div>
         <div class="w-3/4">
-          <h1 class="text-4xl text-center mb-4">{proj.name}</h1>
+          <h1 class="text-4xl text-center font-bold text-cyan-700 mt-10 mb-4">{proj.name}</h1>
           <p class="text-2xl mb-4">{proj.description}</p>
           <ul class="grid grid-cols-2 gap-4">
             {proj.technologies.map((tech: any) => (
