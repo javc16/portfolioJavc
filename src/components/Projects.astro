@@ -1,6 +1,7 @@
 ---
 import type { project } from "../interfaces/interfaces";
 import Card from "./projectCard.astro";
+import VerticalLine from "./VerticalLine.astro";
 const { projects } = Astro.props;
 ---
 
@@ -12,9 +13,11 @@ const { projects } = Astro.props;
   </h1>
   {
     projects.map((proj: project, index: number) => (
+    <VerticalLine />
+
       <Card>
-        <div slot={index % 2 ? "before" : "after"}>
-          <img class="h-96 rounded-md" src={proj.imageUrl} alt={proj.name} />
+        <div slot={index % 2 ? "before" : "after"} class="m-4">
+          <img class="h-64 lg:h-96 rounded-md" src={proj.imageUrl} alt={proj.name} />
         </div>
         <div class="w-3/4">
           <h1 class="text-4xl text-center font-bold text-cyan-700 mt-10 mb-4">{proj.name}</h1>
@@ -41,6 +44,9 @@ const { projects } = Astro.props;
           </ul>
         </div>
       </Card>
-    ))
+    ))    
   }
+  
+  <VerticalLine />
+
 </div>
