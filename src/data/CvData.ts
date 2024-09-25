@@ -15,7 +15,7 @@ export const companyLogos: companyLogo[] = [
   },
   {
     name: "SportsAddictHN",
-    url: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bbe2f157-e46c-4b1a-9cb8-d73499b69a58/dhyevgb-4658e6de-dbbb-4b65-974e-d82424e4982d.jpg/v1/fill/w_894,h_894,q_70,strp/sport_addict_logo_by_pachi3p_dhyevgb-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiJcL2ZcL2JiZTJmMTU3LWU0NmMtNGIxYS05Y2I4LWQ3MzQ5OWI2OWE1OFwvZGh5ZXZnYi00NjU4ZTZkZS1kYmJiLTRiNjUtOTc0ZS1kODI0MjRlNDk4MmQuanBnIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.mOMlmqyxmuXAXLSv6PE5L6XTtoJlwBo1DQHjF7Ox-w4",
+    url: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bbe2f157-e46c-4b1a-9cb8-d73499b69a58/di8gfjq-9d7da07a-ee65-4c32-8f64-567e50272b7a.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2JiZTJmMTU3LWU0NmMtNGIxYS05Y2I4LWQ3MzQ5OWI2OWE1OFwvZGk4Z2ZqcS05ZDdkYTA3YS1lZTY1LTRjMzItOGY2NC01NjdlNTAyNzJiN2EucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.lHhKwUbUwbXn9_dowoY38_ndOVYVcVKniVN430ef6Pk",
   },
   {
     name: "Altiatek",
