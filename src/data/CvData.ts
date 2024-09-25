@@ -14,6 +14,10 @@ export const companyLogos: companyLogo[] = [
     url: "https://upload.wikimedia.org/wikipedia/commons/a/ae/StepStone_Logo.svg",
   },
   {
+    name: "SportsAddictHN",
+    url: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bbe2f157-e46c-4b1a-9cb8-d73499b69a58/dhyevgb-4658e6de-dbbb-4b65-974e-d82424e4982d.jpg/v1/fill/w_894,h_894,q_70,strp/sport_addict_logo_by_pachi3p_dhyevgb-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiJcL2ZcL2JiZTJmMTU3LWU0NmMtNGIxYS05Y2I4LWQ3MzQ5OWI2OWE1OFwvZGh5ZXZnYi00NjU4ZTZkZS1kYmJiLTRiNjUtOTc0ZS1kODI0MjRlNDk4MmQuanBnIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.mOMlmqyxmuXAXLSv6PE5L6XTtoJlwBo1DQHjF7Ox-w4",
+  },
+  {
     name: "Altiatek",
     url: "https://cdn.prod.website-files.com/65d9e00a55a1800b41017d31/65e5b90ab807bbb4d3d7eb81_Frame%20129.svg",
   },
