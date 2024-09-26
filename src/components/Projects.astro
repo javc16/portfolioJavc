@@ -22,7 +22,7 @@ const { projects } = Astro.props;
         <div class="w-3/4">
           <h1 class="text-4xl text-center font-bold text-cyan-700 mt-10 mb-4">{proj.name}</h1>
           <p class="text-2xl mb-4">{proj.description}</p>
-          <ul class="grid grid-cols-2 gap-4">
+          <ul class="grid grid-cols-2 gap-4 mb-10">
             {proj.technologies.map((tech: any) => (
               <li class="flex mb-2">
                 <div class="flex items-center">
@@ -42,7 +42,27 @@ const { projects } = Astro.props;
               </li>
             ))}
           </ul>
-        </div>
+          <div class="flex justify-center">
+            <div class="m-4">
+              
+              {proj.demoUrl !== '' ? (
+                <a href={proj.demoUrl} target="_blank" class="px-2 py-1 border border-cyan-800 rounded-md text-white bg-gray-700 no-underline">View Demo</a>
+              ) : (
+                <br />
+              )}        
+              </div>
+              <div class="m-4">
+                
+                {proj.githubUrl !== '' ? (
+                  <a href={proj.githubUrl} target="_blank" class="px-2 py-1 border border-cyan-800 rounded-md text-white bg-gray-700 no-underline">Github Repository</a>
+                ) : (
+                  <br />
+                )}        
+                </div>
+          </div>
+     
+          </div>
+     
       </Card>
     ))    
   }
