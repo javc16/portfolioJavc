@@ -39,6 +39,14 @@ export const technologyList: string[] = ["Angular", "NextJs","C#","NestJs", "SQL
 
 export const projects: project[] = [
   {
+    name: "Sports Addicts Website",
+    imageUrl: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bbe2f157-e46c-4b1a-9cb8-d73499b69a58/di8mfqm-1db2f9bd-8e39-4252-a0f2-06a403629376.png/v1/fill/w_1108,h_721,q_70,strp/screenshot_2024_09_25_183242_by_pachi3p_di8mfqm-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9ODM0IiwicGF0aCI6IlwvZlwvYmJlMmYxNTctZTQ2Yy00YjFhLTljYjgtZDczNDk5YjY5YTU4XC9kaThtZnFtLTFkYjJmOWJkLThlMzktNDI1Mi1hMGYyLTA2YTQwMzYyOTM3Ni5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.O0JOfppNITWBGOOsgAGV65-VTVQtvP8E7jFKmLBoPoA",
+    description: `S.A.A.S. platform with multiple capabilities to handle invoices, supply chain and inventory processes.`,
+    demoUrl: "",
+    githubUrl: "",
+    technologies: ["NextJS", "C#", "DynamoDB", "React"],
+  },
+  {
     name: "Gifs App",
     imageUrl: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bbe2f157-e46c-4b1a-9cb8-d73499b69a58/di8g2lb-311a5c88-7e4b-4c4b-8cd4-22c666a1e6d8.png/v1/fill/w_1125,h_710,q_70,strp/screenshot_2024_09_24_215620_by_pachi3p_di8g2lb-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9ODA4IiwicGF0aCI6IlwvZlwvYmJlMmYxNTctZTQ2Yy00YjFhLTljYjgtZDczNDk5YjY5YTU4XC9kaThnMmxiLTMxMWE1Yzg4LTdlNGItNGM0Yi04Y2Q0LTIyYzY2NmExZTZkOC5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.25BS2fBXH-dguK4TyidD3gDtNV-o-IW9Ovq6ymIXRHE",
     description: `Frontend solution to find gifs using a search field using angular and typescript best practices, you can click on view demo to test it yourself.`,
