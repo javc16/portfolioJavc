@@ -41,7 +41,7 @@ export const projects: project[] = [
   {
     name: "Sports Addicts Website",
     imageUrl: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bbe2f157-e46c-4b1a-9cb8-d73499b69a58/di8mfqm-1db2f9bd-8e39-4252-a0f2-06a403629376.png/v1/fill/w_1108,h_721,q_70,strp/screenshot_2024_09_25_183242_by_pachi3p_di8mfqm-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9ODM0IiwicGF0aCI6IlwvZlwvYmJlMmYxNTctZTQ2Yy00YjFhLTljYjgtZDczNDk5YjY5YTU4XC9kaThtZnFtLTFkYjJmOWJkLThlMzktNDI1Mi1hMGYyLTA2YTQwMzYyOTM3Ni5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.O0JOfppNITWBGOOsgAGV65-VTVQtvP8E7jFKmLBoPoA",
-    description: `S.A.A.S. platform with multiple capabilities to handle invoices, supply chain and inventory processes.`,
+    description: `SaaS platform with multiple capabilities to handle invoices, supply chain and inventory processes.`,
     demoUrl: "",
     githubUrl: "",
     technologies: ["NextJS", "C#", "DynamoDB", "React"],
@@ -49,7 +49,7 @@ export const projects: project[] = [
   {
     name: "Gifs App",
     imageUrl: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bbe2f157-e46c-4b1a-9cb8-d73499b69a58/di8g2lb-311a5c88-7e4b-4c4b-8cd4-22c666a1e6d8.png/v1/fill/w_1125,h_710,q_70,strp/screenshot_2024_09_24_215620_by_pachi3p_di8g2lb-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9ODA4IiwicGF0aCI6IlwvZlwvYmJlMmYxNTctZTQ2Yy00YjFhLTljYjgtZDczNDk5YjY5YTU4XC9kaThnMmxiLTMxMWE1Yzg4LTdlNGItNGM0Yi04Y2Q0LTIyYzY2NmExZTZkOC5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.25BS2fBXH-dguK4TyidD3gDtNV-o-IW9Ovq6ymIXRHE",
-    description: `Frontend solution to find gifs using a search field using angular and typescript best practices, you can click on view demo to test it yourself.`,
+    description: `Frontend solution to find GIFs using a search field, developed with Angular and TypeScript best practices. Click on ‘View Demo’ to test it yourself.`,
     demoUrl: "https://shimmering-kangaroo-edc1a1.netlify.app/",
     githubUrl: "https://github.com/javc16/03-gifs-app",
     technologies: ["Angular", "Typescript"],
@@ -57,7 +57,7 @@ export const projects: project[] = [
   {
     name: "Finance Backend",
     imageUrl: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bbe2f157-e46c-4b1a-9cb8-d73499b69a58/di8g52g-b2ef1265-7ddc-4013-a278-99f454aa3134.png/v1/fill/w_855,h_935,q_70,strp/backend_image_by_pachi3p_di8g52g-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MSIsInBhdGgiOiJcL2ZcL2JiZTJmMTU3LWU0NmMtNGIxYS05Y2I4LWQ3MzQ5OWI2OWE1OFwvZGk4ZzUyZy1iMmVmMTI2NS03ZGRjLTQwMTMtYTI3OC05OWY0NTRhYTMxMzQucG5nIiwid2lkdGgiOiI8PTExNzEifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.ZE5P-_LePNjNci1Jf7moHAQla5q-Quf_p_FDYEMv6kA",
-    description: `Finance backend with all CRUD functionalities for clients, accounts and transactions entities with 2 reports as a plus, with all best practices like SOLID, dependency injection, repository and builder patterns and more.`,
+    description: `Finance backend with full CRUD functionalities for clients, accounts, and transactions entities, including two additional reports. Developed using best practices such as SOLID principles, dependency injection, repository, and builder patterns.`,
     demoUrl: "",
     githubUrl: "https://github.com/javc16/Financiera",
     technologies: ["C#", "Net Core", "Entity Framework", "SQL"],
