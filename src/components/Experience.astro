@@ -1,13 +1,39 @@
 ---
-
 const { experience } = Astro.props;
-
 ---
 
-
-
-<div class="flex flex-col text-center ml-6 mr-6 mb-10 md:ml-[25%] md:mr-[25%]">
-    <h2 class="text-xl font-bold text-cyan-900 mb-4">{experience.years}</h2>
-    <h1 class="text-3xl font-bold text-cyan-700 mb-4">{experience.company}</h1>
-    <p class="text-xl text-center mx-auto">{experience.description}</p>
-</div>
+<article class="relative mb-6 md:pl-12">
+  <div class="absolute left-[9px] top-8 hidden h-4 w-4 rounded-full border-4 border-white bg-cyan-600 shadow-soft ring-1 ring-cyan-200 md:block"></div>
+  <div class="rounded-lg border border-slate-200 bg-white p-6 shadow-soft transition hover:-translate-y-0.5 hover:border-cyan-200 sm:p-8">
+    <div class="mb-5 flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+      <div>
+        <p class="mb-2 text-sm font-bold uppercase tracking-[0.18em] text-slate-500">
+          <span data-lang="en">{experience.role}</span>
+          <span data-lang="es">{experience.roleEs ?? experience.role}</span>
+        </p>
+        <h3 class="text-2xl font-black tracking-tight text-slate-950">{experience.company}</h3>
+      </div>
+      <h2 class="w-fit rounded-full border border-cyan-100 bg-cyan-50 px-3 py-1 text-xs font-black uppercase tracking-[0.18em] text-cyan-700">{experience.years}</h2>
+    </div>
+    <p class="mb-6 max-w-3xl text-base leading-7 text-slate-600 sm:text-lg">
+      <span data-lang="en">{experience.description}</span>
+      <span data-lang="es">{experience.descriptionEs ?? experience.description}</span>
+    </p>
+    <ul class="grid max-w-3xl gap-3">
+      {experience.highlights.map((highlight: string, index: number) => (
+        <li class="flex gap-3 rounded-lg bg-slate-50 px-4 py-3 text-sm font-semibold leading-6 text-slate-700">
+          <svg class="mt-0.5 h-5 w-5 shrink-0 fill-current text-cyan-700" viewBox="0 0 24 24">
+            <path d="M16.0303 10.0303C16.3232 9.73744 16.3232 9.26256 16.0303 8.96967C15.7374 8.67678 15.2626 8.67678 14.9697 8.96967L10.5 13.4393L9.03033 11.9697C8.73744 11.6768 8.26256 11.6768 7.96967 11.9697C7.67678 12.2626 7.67678 12.7374 7.96967 13.0303L9.96967 15.0303C10.2626 15.3232 10.7374 15.3232 11.0303 15.0303L16.0303 10.0303Z" />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M12 1.25C6.06294 1.25 1.25 6.06294 1.25 12C1.25 17.9371 6.06294 22.75 12 22.75C17.9371 22.75 22.75 17.9371 22.75 12C22.75 6.06294 17.9371 1.25 12 1.25ZM2.75 12C2.75 6.89137 6.89137 2.75 12 2.75C17.1086 2.75 21.25 6.89137 21.25 12C21.25 17.1086 17.1086 21.25 12 21.25C6.89137 21.25 2.75 17.1086 2.75 12Z"
+            />
+          </svg>
+          <span data-lang="en">{highlight}</span>
+          <span data-lang="es">{experience.highlightsEs?.[index] ?? highlight}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+</article>

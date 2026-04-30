@@ -4,16 +4,16 @@ const { logos } = Astro.props;
 ---
 
 <div
-  class="w-full inline-flex flex-nowrap mb-20 overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]"
+  class="mb-12 w-full overflow-hidden border-y border-slate-200 bg-white/70 py-5 [mask-image:_linear-gradient(to_right,transparent_0,_black_96px,_black_calc(100%-96px),transparent_100%)]"
 >
   <ul
-    class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll"
+    class="flex animate-infinite-scroll items-center justify-center md:justify-start [&_img]:max-w-none [&_li]:mx-10"
   >
     {
       // Duplicate the logos array by spreading it into a new array.
-      [...logos, ...logos].map((logo: companyLogo, index: number) => (
-        <li>
-          <img class="h-8" src={logo.url} alt={logo.name} />
+      [...logos, ...logos].map((logo: companyLogo) => (
+        <li class="flex h-12 items-center opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0">
+          <img class="max-h-9 object-contain" src={logo.url} alt={logo.name} loading="lazy" decoding="async" />
         </li>
       ))
     }

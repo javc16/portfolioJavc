@@ -1,0 +1,117 @@
+---
+import type { caseStudy } from "../interfaces/interfaces";
+
+const { caseStudy } = Astro.props;
+
+const technologyStyles: Record<string, string> = {
+  "Next.js": "border-slate-300 bg-slate-950 text-white",
+  React: "border-sky-200 bg-sky-50 text-sky-700",
+  ".NET": "border-violet-200 bg-violet-50 text-violet-700",
+  DynamoDB: "border-sky-200 bg-sky-50 text-sky-700",
+  Cognito: "border-amber-200 bg-amber-50 text-amber-700",
+  "AWS Lambda": "border-orange-200 bg-orange-50 text-orange-700",
+  Amplify: "border-yellow-200 bg-yellow-50 text-yellow-700",
+  CloudFormation: "border-rose-200 bg-rose-50 text-rose-700",
+};
+---
+
+<section class="mx-auto max-w-6xl scroll-mt-24 px-4 py-10 sm:px-6 lg:px-8">
+  <div class="rounded-lg border border-slate-200 bg-white p-6 shadow-soft sm:p-8 lg:p-10">
+    <div class="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+      <div>
+        <p class="mb-3 text-sm font-bold uppercase tracking-[0.28em] text-cyan-700">
+          <span data-lang="en">{caseStudy.eyebrow}</span>
+          <span data-lang="es">{caseStudy.eyebrowEs}</span>
+        </p>
+        <h2 class="mb-4 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
+          <span data-lang="en">{caseStudy.title}</span>
+          <span data-lang="es">{caseStudy.titleEs}</span>
+        </h2>
+        <p class="text-base font-medium leading-7 text-slate-600 sm:text-lg">
+          <span data-lang="en">{caseStudy.summary}</span>
+          <span data-lang="es">{caseStudy.summaryEs}</span>
+        </p>
+        <ul class="mt-6 flex flex-wrap gap-2">
+          {caseStudy.technologies.map((tech: string) => (
+            <li class={`rounded-full border px-3 py-1 text-sm font-bold ${technologyStyles[tech] ?? "border-slate-200 bg-slate-50 text-slate-700"}`}>
+              {tech}
+            </li>
+          ))}
+        </ul>
+        <a
+          href={caseStudy.url}
+          target="_blank"
+          rel="noreferrer"
+          class="mt-8 inline-flex rounded-full bg-slate-950 px-5 py-2.5 text-sm font-black text-white transition hover:bg-cyan-700"
+        >
+          <span data-lang="en">Visit public site</span>
+          <span data-lang="es">Ver sitio publico</span>
+        </a>
+      </div>
+
+      <div class="grid gap-4">
+        <article class="rounded-lg border border-slate-200 bg-slate-50 p-5">
+          <h3 class="mb-2 text-sm font-black uppercase tracking-[0.2em] text-slate-500">
+            <span data-lang="en">Problem</span>
+            <span data-lang="es">Problema</span>
+          </h3>
+          <p class="text-sm font-semibold leading-6 text-slate-700">
+            <span data-lang="en">{caseStudy.problem}</span>
+            <span data-lang="es">{caseStudy.problemEs}</span>
+          </p>
+        </article>
+        <article class="rounded-lg border border-slate-200 bg-slate-50 p-5">
+          <h3 class="mb-2 text-sm font-black uppercase tracking-[0.2em] text-slate-500">
+            <span data-lang="en">My role</span>
+            <span data-lang="es">Mi rol</span>
+          </h3>
+          <p class="text-sm font-semibold leading-6 text-slate-700">
+            <span data-lang="en">{caseStudy.role}</span>
+            <span data-lang="es">{caseStudy.roleEs}</span>
+          </p>
+        </article>
+        <article class="rounded-lg border border-cyan-100 bg-cyan-50 p-5">
+          <h3 class="mb-2 text-sm font-black uppercase tracking-[0.2em] text-cyan-700">
+            <span data-lang="en">Solution</span>
+            <span data-lang="es">Solucion</span>
+          </h3>
+          <p class="text-sm font-semibold leading-6 text-cyan-950">
+            <span data-lang="en">{caseStudy.solution}</span>
+            <span data-lang="es">{caseStudy.solutionEs}</span>
+          </p>
+        </article>
+      </div>
+    </div>
+
+    <div class="mt-8 grid gap-6 lg:grid-cols-2">
+      <div>
+        <h3 class="mb-4 text-lg font-black tracking-tight text-slate-950">
+          <span data-lang="en">Architecture</span>
+          <span data-lang="es">Arquitectura</span>
+        </h3>
+        <ul class="grid gap-3">
+          {caseStudy.architecture.map((item: string, index: number) => (
+            <li class="rounded-lg bg-slate-50 px-4 py-3 text-sm font-semibold leading-6 text-slate-700">
+              <span data-lang="en">{item}</span>
+              <span data-lang="es">{caseStudy.architectureEs[index]}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <h3 class="mb-4 text-lg font-black tracking-tight text-slate-950">
+          <span data-lang="en">Qualitative outcomes</span>
+          <span data-lang="es">Beneficios cualitativos</span>
+        </h3>
+        <ul class="grid gap-3">
+          {caseStudy.outcomes.map((item: string, index: number) => (
+            <li class="rounded-lg bg-slate-50 px-4 py-3 text-sm font-semibold leading-6 text-slate-700">
+              <span data-lang="en">{item}</span>
+              <span data-lang="es">{caseStudy.outcomesEs[index]}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

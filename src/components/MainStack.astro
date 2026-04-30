@@ -1,25 +1,45 @@
 ---
 // src/components/ImageText.astro
 const { profile, technologies } = Astro.props;
+
+const technologyStyles: Record<string, string> = {
+  Angular: "border-red-200 bg-red-50 text-red-700",
+  "Next.js": "border-slate-300 bg-slate-950 text-white",
+  "C#": "border-violet-200 bg-violet-50 text-violet-700",
+  NestJS: "border-rose-200 bg-rose-50 text-rose-700",
+  SQL: "border-blue-200 bg-blue-50 text-blue-700",
+  DynamoDB: "border-sky-200 bg-sky-50 text-sky-700",
+};
 ---
 
-<div class="grid lg:grid-cols-2 justify-items-center mb-5">
+<section class="mx-auto mb-12 grid max-w-6xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-[0.85fr_1.15fr] lg:px-8">
   <img
-    class="h-[90%] w-[15%] rounded-lg"
+    class="aspect-[4/5] w-full max-w-sm rounded-lg object-cover shadow-soft ring-1 ring-slate-200"
     src={profile.imageUrl}
-    alt="Image"
+    alt="Alexander Villalvir profile"
+    loading="lazy"
+    decoding="async"
   />
-  <div class="text-center md:text-start text-2xl">
-    <p class="font-bold mb-2">{profile.presentationText} </p>
-    <p>{profile.experienceText} </p>
-    <p class="text-2xl mt-5 mb-5">{profile.stackText}</p>
-    <ul class="grid grid-cols-2 ml-10 md:ml-0 md:justify-items-start gap-4">
+  <div class="text-center md:text-start">
+    <p class="mb-3 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
+      <span data-lang="en">{profile.presentationText}</span>
+      <span data-lang="es">{profile.presentationTextEs}</span>
+    </p>
+    <p class="max-w-2xl text-lg leading-8 text-slate-600">
+      <span data-lang="en">{profile.experienceText}</span>
+      <span data-lang="es">{profile.experienceTextEs}</span>
+    </p>
+    <p class="mb-5 mt-8 text-sm font-bold uppercase tracking-[0.24em] text-cyan-700">
+      <span data-lang="en">{profile.stackText}</span>
+      <span data-lang="es">{profile.stackTextEs}</span>
+    </p>
+    <ul class="grid grid-cols-2 gap-3 sm:grid-cols-3">
       {
         technologies.map((tech: any) => (
-          <li class="flex mb-2">
-            <div class="flex items-center">
+          <li class="flex">
+            <div class={`flex w-full items-center rounded-lg border px-4 py-3 text-sm font-bold shadow-soft ${technologyStyles[tech] ?? "border-slate-200 bg-white text-slate-800"}`}>
               <svg
-                class="w-6 h-6 fill-current text-indigo-800"
+                class="h-5 w-5 shrink-0 fill-current"
                 viewBox="0 0 24 24"
               >                
                 <path
@@ -31,11 +51,11 @@ const { profile, technologies } = Astro.props;
                   d="M12 1.25C6.06294 1.25 1.25 6.06294 1.25 12C1.25 17.9371 6.06294 22.75 12 22.75C17.9371 22.75 22.75 17.9371 22.75 12C22.75 6.06294 17.9371 1.25 12 1.25ZM2.75 12C2.75 6.89137 6.89137 2.75 12 2.75C17.1086 2.75 21.25 6.89137 21.25 12C21.25 17.1086 17.1086 21.25 12 21.25C6.89137 21.25 2.75 17.1086 2.75 12Z"
                 />
               </svg>
-              <h1 class="ml-2">{tech}</h1>
+              <span class="ml-2">{tech}</span>
             </div>
           </li>
         ))
       }
     </ul>
   </div>
-</div>
+</section>

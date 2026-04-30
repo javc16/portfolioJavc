@@ -3,14 +3,19 @@ import type { experience } from "../interfaces/interfaces";
 import Experience from "./Experience.astro";
 
 const { experiences } = Astro.props;
-
 ---
 
-
-
-<div id="experience" class="flex flex-col">
-    <h1 class="text-5xl text-center bg-gradient-to-r from-cyan-500 to-gray-800 text-transparent bg-clip-text mb-20">My Experience⚒️</h1>
-        {experiences.map((exp: experience) => (
-          <Experience experience={exp}/>         
-        ))}
-</div>
+<section id="experience" class="mx-auto flex max-w-5xl scroll-mt-24 flex-col px-4 sm:px-6 lg:px-8">
+  <h1 class="mb-4 text-center text-4xl font-black tracking-tight text-slate-950 sm:text-5xl">
+    <span data-lang="en">My Experience</span>
+    <span data-lang="es">Mi Experiencia</span>
+  </h1>
+  <p class="mx-auto mb-10 max-w-2xl text-center text-base font-medium leading-7 text-slate-600">
+    <span data-lang="en">A timeline of product delivery, technical ownership, and business application work.</span>
+    <span data-lang="es">Una linea de tiempo de delivery de producto, ownership tecnico y aplicaciones de negocio.</span>
+  </p>
+  <div class="relative">
+    <div class="absolute left-4 top-0 hidden h-full w-px bg-gradient-to-b from-cyan-200 via-slate-300 to-transparent md:block"></div>
+    {experiences.map((exp: experience) => <Experience experience={exp} />)}
+  </div>
+</section>

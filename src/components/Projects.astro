@@ -3,70 +3,129 @@ import type { project } from "../interfaces/interfaces";
 import Card from "./projectCard.astro";
 import VerticalLine from "./VerticalLine.astro";
 const { projects } = Astro.props;
+
+const technologyStyles: Record<string, string> = {
+  Angular: "border-red-200 bg-red-50 text-red-700",
+  "Next.js": "border-slate-300 bg-slate-950 text-white",
+  "NextJS": "border-slate-300 bg-slate-950 text-white",
+  React: "border-sky-200 bg-sky-50 text-sky-700",
+  "C#": "border-violet-200 bg-violet-50 text-violet-700",
+  ".NET": "border-violet-200 bg-violet-50 text-violet-700",
+  NestJS: "border-rose-200 bg-rose-50 text-rose-700",
+  SQL: "border-blue-200 bg-blue-50 text-blue-700",
+  DynamoDB: "border-sky-200 bg-sky-50 text-sky-700",
+  Cognito: "border-amber-200 bg-amber-50 text-amber-700",
+  "AWS Lambda": "border-orange-200 bg-orange-50 text-orange-700",
+  Amplify: "border-yellow-200 bg-yellow-50 text-yellow-700",
+  TypeScript: "border-blue-200 bg-blue-50 text-blue-700",
+  ".NET Core": "border-violet-200 bg-violet-50 text-violet-700",
+  "Entity Framework": "border-emerald-200 bg-emerald-50 text-emerald-700",
+};
 ---
 
-<div id="projects" class="flex flex-col">
-  <h1
-    class="text-5xl text-center bg-gradient-to-r from-cyan-500 to-gray-800 text-transparent bg-clip-text mb-10"
-  >
-    My Coding Projects
+<section id="projects" class="flex scroll-mt-24 flex-col">
+  <h1 class="mb-6 text-center text-4xl font-black tracking-tight text-slate-950 sm:text-5xl">
+    <span data-lang="en">My Coding Projects</span>
+    <span data-lang="es">Mis Proyectos</span>
   </h1>
+  <p class="mx-auto mb-8 max-w-2xl px-4 text-center text-base font-medium leading-7 text-slate-600">
+    <span data-lang="en">Selected work focused on operational workflows, maintainable APIs, and polished user experiences.</span>
+    <span data-lang="es">Trabajo seleccionado enfocado en flujos operativos, APIs mantenibles y experiencias de usuario pulidas.</span>
+  </p>
   {
     projects.map((proj: project, index: number) => (
-    <VerticalLine />
+      <>
+        <VerticalLine />
 
-      <Card>
-        <div slot={index % 2 ? "before" : "after"} class="m-4">
-          <img class="h-64 lg:h-96 rounded-md" src={proj.imageUrl} alt={proj.name} />
-        </div>
-        <div class="w-3/4">
-          <h1 class="text-4xl text-center font-bold text-cyan-700 mt-10 mb-4">{proj.name}</h1>
-          <p class="text-2xl mb-4">{proj.description}</p>
-          <ul class="grid grid-cols-2 gap-4 mb-10">
-            {proj.technologies.map((tech: any) => (
-              <li class="flex mb-2">
-                <div class="flex items-center">
-                  <svg
-                    class="w-6 h-6 fill-current text-indigo-800"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M16.0303 10.0303C16.3232 9.73744 16.3232 9.26256 16.0303 8.96967C15.7374 8.67678 15.2626 8.67678 14.9697 8.96967L10.5 13.4393L9.03033 11.9697C8.73744 11.6768 8.26256 11.6768 7.96967 11.9697C7.67678 12.2626 7.67678 12.7374 7.96967 13.0303L9.96967 15.0303C10.2626 15.3232 10.7374 15.3232 11.0303 15.0303L16.0303 10.0303Z" />
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M12 1.25C6.06294 1.25 1.25 6.06294 1.25 12C1.25 17.9371 6.06294 22.75 12 22.75C17.9371 22.75 22.75 17.9371 22.75 12C22.75 6.06294 17.9371 1.25 12 1.25ZM2.75 12C2.75 6.89137 6.89137 2.75 12 2.75C17.1086 2.75 21.25 6.89137 21.25 12C21.25 17.1086 17.1086 21.25 12 21.25C6.89137 21.25 2.75 17.1086 2.75 12Z"
-                    />
-                  </svg>
-                  <h1 class="ml-2">{tech}</h1>
-                </div>
-              </li>
-            ))}
-          </ul>
-          <div class="flex flex-col sm:flex-row text-center md:text-left justify-center">
-            <div class="m-4">
-              
-              {proj.demoUrl !== '' ? (
-                <a href={proj.demoUrl} target="_blank" class="px-2 py-1 border border-cyan-800 rounded-md text-white bg-gray-700 no-underline">View Demo</a>
-              ) : (
-                <br />
-              )}        
+        <Card>
+          <div slot={index % 2 ? "before" : "after"} class="w-full">
+            <div class="group rounded-lg border border-slate-200 bg-slate-950 p-2 shadow-soft">
+              <div class="flex items-center gap-2 border-b border-white/10 px-2 py-2">
+                <span class="h-2.5 w-2.5 rounded-full bg-red-400"></span>
+                <span class="h-2.5 w-2.5 rounded-full bg-amber-400"></span>
+                <span class="h-2.5 w-2.5 rounded-full bg-emerald-400"></span>
+                <span class="ml-2 h-2 w-20 rounded-full bg-white/10"></span>
               </div>
-              <div class="m-4">
-                
-                {proj.githubUrl !== '' ? (
-                  <a href={proj.githubUrl} target="_blank" class="px-2 py-1 border border-cyan-800 rounded-md text-white bg-gray-700 no-underline">Github Repository</a>
-                ) : (
-                  <br />
-                )}        
-                </div>
+              <div class="overflow-hidden rounded-md bg-white">
+                <img
+                  class="aspect-[16/10] w-full object-cover transition duration-500 group-hover:scale-[1.025]"
+                  src={proj.imageUrl}
+                  alt={proj.name}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </div>
           </div>
-     
-          </div>
-     
-      </Card>
-    ))    
-  }
-  
-  <VerticalLine />
+          <div class="flex min-h-full w-full flex-col rounded-lg border border-slate-200 bg-white p-6 shadow-soft transition hover:-translate-y-0.5 hover:border-cyan-200 sm:p-8">
+            <div class="mb-4 flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+              <h2 class="text-3xl font-black tracking-tight text-slate-950">{proj.name}</h2>
+              {proj.status ? (
+                <span class="w-fit rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-black uppercase tracking-[0.18em] text-slate-500">
+                  <span data-lang="en">{proj.status}</span>
+                  <span data-lang="es">{proj.statusEs ?? proj.status}</span>
+                </span>
+              ) : null}
+            </div>
+            <p class="mb-6 text-base leading-7 text-slate-600 sm:text-lg">
+              <span data-lang="en">{proj.description}</span>
+              <span data-lang="es">{proj.descriptionEs ?? proj.description}</span>
+            </p>
+            {proj.impact ? (
+              <div class="mb-6 rounded-lg border-l-4 border-cyan-500 bg-cyan-50 px-4 py-3">
+                <p class="text-sm font-semibold leading-6 text-cyan-950">
+                  <span data-lang="en">{proj.impact}</span>
+                  <span data-lang="es">{proj.impactEs ?? proj.impact}</span>
+                </p>
+              </div>
+            ) : null}
+            <ul class="mb-8 flex flex-wrap gap-2">
+              {proj.technologies.map((tech: string) => (
+                <li class="flex">
+                  <div class={`flex items-center rounded-full border px-3 py-1 text-sm font-bold ${technologyStyles[tech] ?? "border-slate-200 bg-slate-50 text-slate-700"}`}>
+                    <svg class="h-4 w-4 fill-current" viewBox="0 0 24 24">
+                      <path d="M16.0303 10.0303C16.3232 9.73744 16.3232 9.26256 16.0303 8.96967C15.7374 8.67678 15.2626 8.67678 14.9697 8.96967L10.5 13.4393L9.03033 11.9697C8.73744 11.6768 8.26256 11.6768 7.96967 11.9697C7.67678 12.2626 7.67678 12.7374 7.96967 13.0303L9.96967 15.0303C10.2626 15.3232 10.7374 15.3232 11.0303 15.0303L16.0303 10.0303Z" />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M12 1.25C6.06294 1.25 1.25 6.06294 1.25 12C1.25 17.9371 6.06294 22.75 12 22.75C17.9371 22.75 22.75 17.9371 22.75 12C22.75 6.06294 17.9371 1.25 12 1.25ZM2.75 12C2.75 6.89137 6.89137 2.75 12 2.75C17.1086 2.75 21.25 6.89137 21.25 12C21.25 17.1086 17.1086 21.25 12 21.25C6.89137 21.25 2.75 17.1086 2.75 12Z"
+                      />
+                    </svg>
+                    <span class="ml-1.5">{tech}</span>
+                  </div>
+                </li>
+              ))}
+            </ul>
+            <div class="mt-auto flex flex-col gap-3 text-center sm:flex-row md:text-left">
+              {proj.demoUrl !== "" ? (
+                <a
+                  href={proj.demoUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  class="inline-flex justify-center rounded-full bg-slate-950 px-5 py-2.5 text-sm font-bold text-white no-underline transition hover:bg-cyan-700"
+                >
+                  <span data-lang="en">{proj.primaryAction ?? "View Demo"}</span>
+                  <span data-lang="es">{proj.primaryActionEs ?? "Ver Demo"}</span>
+                </a>
+              ) : null}
 
-</div>
+              {proj.githubUrl !== "" ? (
+                <a
+                  href={proj.githubUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  class="inline-flex justify-center rounded-full border border-slate-300 bg-white px-5 py-2.5 text-sm font-bold text-slate-900 no-underline transition hover:border-cyan-300 hover:text-cyan-700"
+                >
+                  <span data-lang="en">Github Repository</span>
+                  <span data-lang="es">Repositorio Github</span>
+                </a>
+              ) : null}
+            </div>
+          </div>
+        </Card>
+      </>
+    ))
+  }
+
+  <VerticalLine />
+</section>

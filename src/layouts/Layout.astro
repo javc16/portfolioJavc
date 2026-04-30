@@ -7,29 +7,91 @@ interface Props {
 }
 
 const { title } = Astro.props;
+const description =
+  "Alexander Villalvir, full-stack developer specializing in Angular, .NET, SQL, APIs, and business-critical web applications.";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" data-language="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#020617" />
+    <script is:inline>
+      const savedLanguage = localStorage.getItem("portfolio-language") || "en";
+      document.documentElement.dataset.language = savedLanguage;
+      document.documentElement.lang = savedLanguage;
+    </script>
+    <link rel="preconnect" href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com" />
+    <link rel="preconnect" href="https://upload.wikimedia.org" />
+    <link rel="preconnect" href="https://cdn.prod.website-files.com" />
+
     <meta name="title" property="og:title" content={title} />
-    <meta name="description" property="og:description" content="Personal Portfolio" />
-    <meta name="image" property="og:image" content="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bbe2f157-e46c-4b1a-9cb8-d73499b69a58/di8gb4w-0786071c-5749-49a8-9124-d9f244e615e1.png/v1/fit/w_700,h_700,q_70,strp/av_logo__1__by_pachi3p_di8gb4w-375w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzAwIiwicGF0aCI6IlwvZlwvYmJlMmYxNTctZTQ2Yy00YjFhLTljYjgtZDczNDk5YjY5YTU4XC9kaThnYjR3LTA3ODYwNzFjLTU3NDktNDlhOC05MTI0LWQ5ZjI0NGU2MTVlMS5wbmciLCJ3aWR0aCI6Ijw9NzAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.cMFzeIsuIYo6MkS1oigti_km3ZbKiVE0ftQXwA5Byns" />
+    <meta name="description" property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/og-image.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="/og-image.svg" />
 
     <title>{title}</title>
     <ViewTransitions />
   </head>
-  <body>
+  <body class="bg-slate-50 antialiased">
     <slot />
     <Footer />
-  </body><style is:global>
+    <script is:inline>
+      const setPortfolioLanguage = (language) => {
+        document.documentElement.dataset.language = language;
+        document.documentElement.lang = language;
+        localStorage.setItem("portfolio-language", language);
+        document.querySelectorAll("[data-language-button]").forEach((button) => {
+          const isActive = button.dataset.languageButton === language;
+          button.setAttribute("aria-pressed", String(isActive));
+          button.dataset.active = String(isActive);
+        });
+      };
+
+      document.querySelectorAll("[data-language-button]").forEach((button) => {
+        button.addEventListener("click", () => setPortfolioLanguage(button.dataset.languageButton));
+      });
+
+      setPortfolioLanguage(document.documentElement.dataset.language || "en");
+    </script>
+  </body>
+  <style is:global>
     html {
       scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family:
+        Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+    }
+
+    ::selection {
+      background: rgb(14 165 233 / 0.22);
+    }
+
+    html[data-language="en"] [data-lang="es"],
+    html[data-language="es"] [data-lang="en"] {
+      display: none;
+    }
+
+    [data-language-button][data-active="true"] {
+      background: white;
+      color: #020617;
+    }
+
+    :focus-visible {
+      outline: 3px solid rgb(14 165 233 / 0.55);
+      outline-offset: 3px;
     }
   </style>
 </html>

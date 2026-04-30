@@ -1,11 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/projectCard.astro";
 import CompanyLogos from "../components/CompanyLogos.astro";
+import ContactSection from "../components/ContactSection.astro";
 import Experiences from "../components/Experiences.astro";
+import FeaturedCaseStudy from "../components/FeaturedCaseStudy.astro";
 import HeaderInformation from "../components/HeaderInformation.astro";
 import MainStack from "../components/MainStack.astro";
 import Navbar from "../components/Navbar.astro";
+import ProfessionalFocus from "../components/ProfessionalFocus.astro";
 import Projects from "../components/Projects.astro";
 import VerticalLine from "../components/VerticalLine.astro";
 import {
@@ -14,18 +16,23 @@ import {
   technologyList,
   projects,
   experienceList,
+  featuredCaseStudy,
 } from "../data/CvData";
 ---
 
 <Layout title="Alexander Villalvir">
-  <main class="flex flex-col bg-gray-50">
+  <main id="main-content" class="flex min-h-screen flex-col bg-slate-50 text-slate-900">
     <Navbar />
-     <HeaderInformation />
+    <HeaderInformation />
     <CompanyLogos logos={companyLogos} />
+    <ProfessionalFocus />
     <MainStack profile={stackArea} technologies={technologyList} />
+    <VerticalLine />
+    <FeaturedCaseStudy caseStudy={featuredCaseStudy} />
     <VerticalLine />
     <Projects projects={projects} />
     <Experiences experiences={experienceList} />
     <VerticalLine />
+    <ContactSection />
   </main>
 </Layout>

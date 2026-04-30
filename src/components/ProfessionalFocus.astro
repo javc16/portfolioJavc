@@ -1,0 +1,56 @@
+---
+const focusAreas = [
+  {
+    title: "Frontend architecture",
+    titleEs: "Arquitectura frontend",
+    label: "01",
+    description: "Scalable UI flows with Angular, React, Next.js, reusable components, and maintainable state/data patterns.",
+    descriptionEs: "Flujos de UI escalables con Angular, React, Next.js, componentes reutilizables y patrones mantenibles de estado/datos.",
+  },
+  {
+    title: "Backend and data",
+    titleEs: "Backend y datos",
+    label: "02",
+    description: "Business APIs, SQL-backed workflows, reporting endpoints, clean service boundaries, and pragmatic architecture.",
+    descriptionEs: "APIs de negocio, flujos respaldados por SQL, endpoints de reporteria, limites claros de servicios y arquitectura pragmatica.",
+  },
+  {
+    title: "Product delivery",
+    titleEs: "Delivery de producto",
+    label: "03",
+    description: "Agile execution, CI/CD collaboration, technical leadership, and reliable releases for distributed teams.",
+    descriptionEs: "Ejecucion Agile, colaboracion con CI/CD, liderazgo tecnico y releases confiables para equipos distribuidos.",
+  },
+];
+---
+
+<section class="mx-auto mb-12 max-w-6xl px-4 sm:px-6 lg:px-8">
+  <div class="mb-8 text-center">
+    <p class="mb-3 text-sm font-bold uppercase tracking-[0.28em] text-cyan-700">
+      <span data-lang="en">What I bring</span>
+      <span data-lang="es">Lo que aporto</span>
+    </p>
+    <h2 class="text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
+      <span data-lang="en">Practical engineering for business-critical web apps</span>
+      <span data-lang="es">Ingenieria practica para aplicaciones criticas de negocio</span>
+    </h2>
+  </div>
+
+  <div class="grid gap-4 md:grid-cols-3">
+    {focusAreas.map((area) => (
+      <article class="rounded-lg border border-slate-200 bg-white p-6 shadow-soft transition hover:-translate-y-0.5 hover:border-cyan-200">
+        <div class="mb-5 flex h-10 w-10 items-center justify-center rounded-full bg-slate-950 text-xs font-black text-white">
+          {area.label}
+        </div>
+        <h3 class="mb-3 text-lg font-black tracking-tight text-slate-950">
+          <span data-lang="en">{area.title}</span>
+          <span data-lang="es">{area.titleEs}</span>
+        </h3>
+        <p class="text-sm font-medium leading-6 text-slate-600">
+          <span data-lang="en">{area.description}</span>
+          <span data-lang="es">{area.descriptionEs}</span>
+        </p>
+      </article>
+    ))}
+  </div>
+</section>
