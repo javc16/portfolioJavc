@@ -2,60 +2,39 @@
 // src/components/ImageText.astro
 const { profile, technologies } = Astro.props;
 
-const technologyStyles: Record<string, string> = {
-  Angular: "border-red-200 bg-red-50 text-red-700",
-  "Next.js": "border-slate-300 bg-slate-950 text-white",
-  "C#": "border-violet-200 bg-violet-50 text-violet-700",
-  NestJS: "border-rose-200 bg-rose-50 text-rose-700",
-  SQL: "border-blue-200 bg-blue-50 text-blue-700",
-  DynamoDB: "border-sky-200 bg-sky-50 text-sky-700",
-};
 ---
 
-<section class="mx-auto mb-12 grid max-w-6xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-[0.85fr_1.15fr] lg:px-8">
-  <img
-    class="aspect-[4/3.4] w-full max-w-sm rounded-lg object-cover object-[center_38%] shadow-soft ring-1 ring-slate-200"
-    src={profile.imageUrl}
-    alt="Alexander Villalvir profile"
-    loading="lazy"
-    decoding="async"
-  />
-  <div class="text-center md:text-start">
-    <p class="mb-3 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
+<section class="relative bg-[#d9ff56] px-5 py-24 text-[#11110f] sm:px-8 lg:px-12 lg:py-28">
+  <div class="mx-auto grid max-w-[1400px] items-end gap-12 lg:grid-cols-12">
+  <div class="lg:col-span-7 lg:col-start-2">
+    <p class="mb-8 text-5xl font-medium leading-none tracking-[-0.055em] sm:text-7xl">
       <span data-lang="en">{profile.presentationText}</span>
       <span data-lang="es">{profile.presentationTextEs}</span>
     </p>
-    <p class="max-w-2xl text-lg leading-8 text-slate-600">
+    <p class="max-w-2xl text-lg font-medium leading-8 text-black/60 sm:text-xl">
       <span data-lang="en">{profile.experienceText}</span>
       <span data-lang="es">{profile.experienceTextEs}</span>
     </p>
-    <p class="mb-5 mt-8 text-sm font-bold uppercase tracking-[0.24em] text-cyan-700">
+    <p class="font-mono mb-5 mt-12 text-xs font-medium uppercase tracking-[0.2em] text-black/45">
       <span data-lang="en">{profile.stackText}</span>
       <span data-lang="es">{profile.stackTextEs}</span>
     </p>
-    <ul class="grid grid-cols-2 gap-3 sm:grid-cols-3">
+    <ul class="flex flex-wrap gap-2">
       {
-        technologies.map((tech: any) => (
+        technologies.map((tech: string) => (
           <li class="flex">
-            <div class={`flex w-full items-center rounded-lg border px-4 py-3 text-sm font-bold shadow-soft ${technologyStyles[tech] ?? "border-slate-200 bg-white text-slate-800"}`}>
-              <svg
-                class="h-5 w-5 shrink-0 fill-current"
-                viewBox="0 0 24 24"
-              >                
-                <path
-                  d="M16.0303 10.0303C16.3232 9.73744 16.3232 9.26256 16.0303 8.96967C15.7374 8.67678 15.2626 8.67678 14.9697 8.96967L10.5 13.4393L9.03033 11.9697C8.73744 11.6768 8.26256 11.6768 7.96967 11.9697C7.67678 12.2626 7.67678 12.7374 7.96967 13.0303L9.96967 15.0303C10.2626 15.3232 10.7374 15.3232 11.0303 15.0303L16.0303 10.0303Z"
-                />
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M12 1.25C6.06294 1.25 1.25 6.06294 1.25 12C1.25 17.9371 6.06294 22.75 12 22.75C17.9371 22.75 22.75 17.9371 22.75 12C22.75 6.06294 17.9371 1.25 12 1.25ZM2.75 12C2.75 6.89137 6.89137 2.75 12 2.75C17.1086 2.75 21.25 6.89137 21.25 12C21.25 17.1086 17.1086 21.25 12 21.25C6.89137 21.25 2.75 17.1086 2.75 12Z"
-                />
-              </svg>
-              <span class="ml-2">{tech}</span>
+            <div class="rounded-full border border-black/30 px-4 py-2 text-sm font-bold transition hover:bg-[#11110f] hover:text-[#d9ff56]">
+              <span>{tech}</span>
             </div>
           </li>
         ))
       }
     </ul>
+  </div>
+  <figure class="relative lg:col-span-3 lg:col-start-10">
+    <div class="absolute -left-5 -top-5 h-full w-full border border-black/30"></div>
+    <img class="relative aspect-[3/4] w-full object-cover object-[center_30%] grayscale" src={profile.imageUrl} alt="Alexander Villalvir profile" loading="lazy" decoding="async" />
+    <figcaption class="font-mono mt-4 flex justify-between text-[10px] uppercase tracking-[0.15em] text-black/50"><span>Profile / 2026</span><span>HN</span></figcaption>
+  </figure>
   </div>
 </section>

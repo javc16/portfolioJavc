@@ -9,7 +9,6 @@ import MainStack from "../components/MainStack.astro";
 import Navbar from "../components/Navbar.astro";
 import ProfessionalFocus from "../components/ProfessionalFocus.astro";
 import Projects from "../components/Projects.astro";
-import VerticalLine from "../components/VerticalLine.astro";
 import {
   companyLogos,
   stackArea,
@@ -21,18 +20,15 @@ import {
 ---
 
 <Layout title="Alexander Villalvir">
-  <main id="main-content" class="flex min-h-screen flex-col bg-slate-50 text-slate-900">
+  <main id="main-content" class="flex min-h-screen flex-col overflow-hidden bg-[#11110f] text-[#f2efe6]">
     <Navbar />
     <HeaderInformation />
     <CompanyLogos logos={companyLogos} />
     <ProfessionalFocus />
     <MainStack profile={stackArea} technologies={technologyList} />
-    <VerticalLine />
     <FeaturedCaseStudy caseStudy={featuredCaseStudy} />
-    <VerticalLine />
     <Projects projects={projects} />
     <Experiences experiences={experienceList} />
-    <VerticalLine />
     <ContactSection />
   </main>
 </Layout>

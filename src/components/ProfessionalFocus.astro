@@ -24,33 +24,35 @@ const focusAreas = [
 ];
 ---
 
-<section class="mx-auto mb-12 max-w-6xl px-4 sm:px-6 lg:px-8">
-  <div class="mb-8 text-center">
-    <p class="mb-3 text-sm font-bold uppercase tracking-[0.28em] text-cyan-700">
+<section class="bg-[#f2efe6] px-5 py-24 text-[#11110f] sm:px-8 lg:px-12 lg:py-32">
+  <div class="mx-auto max-w-[1400px]">
+  <div class="mb-16 grid gap-6 lg:grid-cols-12">
+    <p class="font-mono text-xs font-medium uppercase tracking-[0.2em] text-black/45 lg:col-span-3">
       <span data-lang="en">What I bring</span>
       <span data-lang="es">Lo que aporto</span>
     </p>
-    <h2 class="text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
+    <h2 class="max-w-4xl text-4xl font-medium leading-[1.03] tracking-[-0.045em] sm:text-6xl lg:col-span-8 lg:text-7xl">
       <span data-lang="en">Practical engineering for business-critical web apps</span>
       <span data-lang="es">Ingenieria practica para aplicaciones criticas de negocio</span>
     </h2>
   </div>
 
-  <div class="grid gap-4 md:grid-cols-3">
+  <div class="grid border-t border-black/20 md:grid-cols-3">
     {focusAreas.map((area) => (
-      <article class="rounded-lg border border-slate-200 bg-white p-6 shadow-soft transition hover:-translate-y-0.5 hover:border-cyan-200">
-        <div class="mb-5 flex h-10 w-10 items-center justify-center rounded-full bg-slate-950 text-xs font-black text-white">
+      <article class="group border-b border-black/20 py-8 md:border-b-0 md:border-r md:px-7 md:first:pl-0 md:last:border-r-0 md:last:pr-0 lg:py-10">
+        <div class="font-mono mb-14 text-xs text-black/40 transition group-hover:text-black">
           {area.label}
         </div>
-        <h3 class="mb-3 text-lg font-black tracking-tight text-slate-950">
+        <h3 class="mb-4 text-2xl font-semibold tracking-[-0.03em]">
           <span data-lang="en">{area.title}</span>
           <span data-lang="es">{area.titleEs}</span>
         </h3>
-        <p class="text-sm font-medium leading-6 text-slate-600">
+        <p class="max-w-sm text-sm font-medium leading-6 text-black/55">
           <span data-lang="en">{area.description}</span>
           <span data-lang="es">{area.descriptionEs}</span>
         </p>
       </article>
     ))}
+  </div>
   </div>
 </section>

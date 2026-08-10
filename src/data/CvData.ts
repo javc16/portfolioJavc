@@ -84,6 +84,7 @@ export const projects: project[] = [
 ];
 
 export const featuredCaseStudy: caseStudy = {
+  imageUrl: projects[0].imageUrl,
   title: "Sports Addicts Website",
   titleEs: "Sports Addicts Website",
   eyebrow: "Featured case study",

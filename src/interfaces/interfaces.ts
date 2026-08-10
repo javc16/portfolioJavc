@@ -31,6 +31,7 @@ export interface experience{
 }
 
 export interface caseStudy{
+    imageUrl:string;
     title:string;
     titleEs:string;
     eyebrow:string;

@@ -3,19 +3,20 @@ import type { companyLogo } from "../interfaces/interfaces";
 const { logos } = Astro.props;
 ---
 
-<div
-  class="mb-12 w-full overflow-hidden border-y border-slate-200 bg-white/70 py-5 [mask-image:_linear-gradient(to_right,transparent_0,_black_96px,_black_calc(100%-96px),transparent_100%)]"
->
-  <ul
-    class="flex animate-infinite-scroll items-center justify-center md:justify-start [&_img]:max-w-none [&_li]:mx-10"
-  >
+<section class="border-b border-white/10 bg-[#11110f] px-5 py-10 sm:px-8 lg:px-12">
+  <div class="mx-auto grid max-w-[1400px] gap-8 lg:grid-cols-[260px_1fr] lg:items-center">
+    <p class="font-mono text-xs uppercase leading-5 tracking-[0.18em] text-white/45">
+      <span data-lang="en">Teams and companies<br />I have contributed to</span>
+      <span data-lang="es">Equipos y empresas<br />a los que he contribuido</span>
+    </p>
+  <ul class="grid grid-cols-2 items-center gap-x-8 gap-y-7 sm:grid-cols-3 lg:grid-cols-6">
     {
-      // Duplicate the logos array by spreading it into a new array.
-      [...logos, ...logos].map((logo: companyLogo) => (
-        <li class="flex h-12 items-center opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0">
-          <img class="max-h-9 object-contain" src={logo.url} alt={logo.name} loading="lazy" decoding="async" />
+      logos.map((logo: companyLogo) => (
+        <li class="flex h-10 items-center justify-center opacity-50 grayscale invert transition hover:opacity-90">
+          <img class="max-h-8 max-w-full object-contain" src={logo.url} alt={logo.name} loading="lazy" decoding="async" />
         </li>
       ))
     }
   </ul>
-</div>
+  </div>
+</section>

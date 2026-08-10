@@ -5,17 +5,20 @@ import Experience from "./Experience.astro";
 const { experiences } = Astro.props;
 ---
 
-<section id="experience" class="mx-auto flex max-w-5xl scroll-mt-24 flex-col px-4 sm:px-6 lg:px-8">
-  <h1 class="mb-4 text-center text-4xl font-black tracking-tight text-slate-950 sm:text-5xl">
+<section id="experience" class="scroll-mt-24 bg-[#191917] px-5 py-24 sm:px-8 lg:px-12 lg:py-32">
+  <div class="mx-auto max-w-[1400px]">
+  <div class="mb-16 grid gap-6 lg:grid-cols-12">
+  <h1 class="text-5xl font-medium leading-none tracking-[-0.055em] text-[#f2efe6] sm:text-7xl lg:col-span-7">
     <span data-lang="en">My Experience</span>
     <span data-lang="es">Mi Experiencia</span>
   </h1>
-  <p class="mx-auto mb-10 max-w-2xl text-center text-base font-medium leading-7 text-slate-600">
+  <p class="max-w-xl text-base font-medium leading-7 text-white/50 lg:col-span-4 lg:col-start-9 lg:self-end">
     <span data-lang="en">A timeline of product delivery, technical ownership, and business application work.</span>
     <span data-lang="es">Una linea de tiempo de delivery de producto, ownership tecnico y aplicaciones de negocio.</span>
   </p>
-  <div class="relative">
-    <div class="absolute left-4 top-0 hidden h-full w-px bg-gradient-to-b from-cyan-200 via-slate-300 to-transparent md:block"></div>
+  </div>
+  <div class="relative border-t border-white/15">
     {experiences.map((exp: experience) => <Experience experience={exp} />)}
+  </div>
   </div>
 </section>
